@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "MarkGEO-Light";
+    src: url("MarkGEO-Light.otf");
+}
+
+@font-face {
+    font-family: "MarkGEO-SemiBold";
+    src: url("MarkGEO-SemiBold.otf");
+}
+
+@font-face {
+    font-family: "MarkGEOCAPS-Bold";
+    src: url("MarkGEOCAPS-Bold.otf");
+}
+
+@font-face {
+    font-family: "MarkGEOCAPS-Light";
+    src: url("MarkGEOCAPS-Light.otf");
+}
+
+@font-face {
+    font-family: "MarkGEOCAPS-SemiBold";
+    src: url("MarkGEOCAPS-SemiBold.otf");
+}
