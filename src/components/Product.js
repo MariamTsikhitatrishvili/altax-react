@@ -1,22 +1,76 @@
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 import ProductImage from "./ProductImage"
 import ProductInfo from "./ProductInfo"
 import ProductSvitcher from "./ProductSvitcher"
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+
+const rightFadeIn = {
+    initial: {
+        opacity: 0,
+        x: 300
+    },
+    animate: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: 0.3
+        }
+    },
+    exit: {
+        opacity: 0,
+        x: 300
+    }
+}
+
+const leftFadeIn = {
+    initial: {
+        opacity: 0,
+        x: -300
+    },
+    animate: {
+        opacity: 1,
+        x: 0,
+        transition: {
+            delay: 0.3
+        }
+    },
+    exit: {
+        opacity: 0,
+        x: -300
+    }
+}
 
 
 function Product({ product }) {
     const [activeProductIndex, setActiveProductIndex] = useState(0)
+    const control = useAnimation()
+    const [ref, inView] = useInView()
+
+    useEffect(() => {
+        if (inView) {
+            setTimeout(() => {
+                control.start("animate");
+            }, 100);
+        } else {
+            control.start("exit")
+        }
+    }, [control, inView]);
+
 
     return (
         <div className="h-screen relative">
             <img src={product["bg_image URL"]} className="absolute w-full h-full top-0 left-0 " alt={product.title} />
             <div className="absolute w-full h-full top-0 left-0 gradient"></div>
             <div className="flex absolute w-full h-full top-0 left-0 justify-between items-center">
-                <div className="flex flex-col max-w-[60%]">
+                <motion.div key={"desc"} variants={leftFadeIn} initial="initial" animate={control} ref={ref} className="flex flex-col max-w-[60%]">
                     <ProductInfo flag={product['flag_image URL']} title={product.title} longDesc={product.long_desc} shortDesc={product.short_desc} />
                     <ProductSvitcher subProducts={product.subproducts} setActiveProductIndex={setActiveProductIndex} />
-                </div>
-                <ProductImage image={product.subproducts[activeProductIndex]['image URL']} />
+                </motion.div>
+                <motion.div key={"img"} variants={rightFadeIn} initial="initial" animate={control} ref={ref} >
+                    <ProductImage image={product.subproducts[activeProductIndex]['image URL']} />
+                </motion.div>
             </div>
         </div>
     )

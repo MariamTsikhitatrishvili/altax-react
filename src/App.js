@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import axios from "axios"
 import HeaderSlider from './components/HeaderSlider';
 import Product from './components/Product';
+import Footer from './components/Footer';
 
 function App() {
   const [data, setData] = useState({})
@@ -24,9 +25,10 @@ function App() {
       <HeaderSlider slides={data.Slider} />
       {
         data.Products.map((product, id) =>
-          <Product key={id} product={product}/>
+          <Product key={id} product={product} />
         )
       }
+      <Footer partners={data.Partners} />
     </div>
   );
 }
