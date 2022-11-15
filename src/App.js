@@ -9,7 +9,19 @@ import ReactFullpage from '@fullpage/react-fullpage'; // will return static vers
 function App() {
   const [data, setData] = useState({})
   const [pending, setPendig] = useState(true)
+  const [width, setWidth] = useState(window.innerWidth);
 
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
+
+  const isMobile = width <= 768;
 
   const getData = () => {
     axios.get("//altax-admin.maestroerror.ge/data/data.json")
@@ -23,7 +35,7 @@ function App() {
   }, [])
 
   return (
-    !pending && <ReactFullpage
+    !pending && !isMobile ? <ReactFullpage
       //fullpage options
       licenseKey={'YOUR_KEY_HERE'}
       scrollingSpeed={1000} /* Options here */
@@ -32,7 +44,7 @@ function App() {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <div className='flex flex-col justify-between h-screen'>
+              <div className='flex flex-col gap-24 h-screen'>
                 <Nav />
                 <HeaderSlider slides={data.Slider} />
               </div>
@@ -50,7 +62,23 @@ function App() {
           </ReactFullpage.Wrapper>
         );
       }}
-    />
+    /> :
+      <>
+        <div className='flex flex-col gap-24 h-screen'>
+          <div className='flex flex-col gap-24 h-screen'>
+            <Nav />
+            <HeaderSlider slides={data.Slider} />
+          </div>
+          {
+            data.Products?.map((product, id) =>
+              <div className='h-screen'>
+                <Product key={id} product={product} />
+              </div>
+            )
+          }
+          <Footer partners={data?.Partners} />
+        </div>
+      </>
   );
 }
 
