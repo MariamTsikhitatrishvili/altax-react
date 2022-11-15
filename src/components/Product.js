@@ -2,44 +2,32 @@ import { useState, useEffect } from "react"
 import ProductImage from "./ProductImage"
 import ProductInfo from "./ProductInfo"
 import ProductSvitcher from "./ProductSvitcher"
-import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 
 const rightFadeIn = {
     initial: {
         opacity: 0,
-        x: 300
     },
     animate: {
         opacity: 1,
-        x: 0,
         transition: {
             delay: 0.3
         }
     },
-    exit: {
-        opacity: 0,
-        x: 300
-    }
 }
 
 const leftFadeIn = {
     initial: {
         opacity: 0,
-        x: -300
     },
     animate: {
         opacity: 1,
-        x: 0,
         transition: {
             delay: 0.3
         }
     },
-    exit: {
-        opacity: 0,
-        x: -300
-    }
 }
 
 

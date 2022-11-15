@@ -4,10 +4,13 @@ import axios from "axios"
 import HeaderSlider from './components/HeaderSlider';
 import Product from './components/Product';
 import Footer from './components/Footer';
+import ReactFullpage from '@fullpage/react-fullpage'; // will return static version on server and "live" version on client
 
 function App() {
   const [data, setData] = useState({})
   const [pending, setPendig] = useState(true)
+
+
   const getData = () => {
     axios.get("//altax-admin.maestroerror.ge/data/data.json")
       .then((res) => {
@@ -20,16 +23,34 @@ function App() {
   }, [])
 
   return (
-    !pending && <div className="App">
-      <Nav />
-      <HeaderSlider slides={data.Slider} />
-      {
-        data.Products.map((product, id) =>
-          <Product key={id} product={product} />
-        )
-      }
-      <Footer partners={data.Partners} />
-    </div>
+    !pending && <ReactFullpage
+      //fullpage options
+      licenseKey={'YOUR_KEY_HERE'}
+      scrollingSpeed={1000} /* Options here */
+
+      render={({ state, fullpageApi }) => {
+        return (
+          <ReactFullpage.Wrapper>
+            <div className="section">
+              <div className='flex flex-col justify-between h-screen'>
+                <Nav />
+                <HeaderSlider slides={data.Slider} />
+              </div>
+            </div>
+            {
+              data.Products?.map((product, id) =>
+                <div className="section">
+                  <Product key={id} product={product} />
+                </div>
+              )
+            }
+            <div className="section">
+              <Footer partners={data?.Partners} />
+            </div>
+          </ReactFullpage.Wrapper>
+        );
+      }}
+    />
   );
 }
 

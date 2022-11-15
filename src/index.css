@@ -42,6 +42,8 @@ code {
   display: flex !important;
   align-items: center;
   margin-left: 8px;
+  margin-top: 48px;
+  margin-bottom: 24px;
 }
 
 .slick-dots li {
@@ -64,4 +66,12 @@ code {
 .gradient {
   background: rgb(0, 0, 0);
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.8438725832129726) 0%, rgba(0, 0, 0, 0.36207986612613796) 100%);
+}
+
+.fp-overflow {
+  overflow-x: hidden;
+}
+
+.fp-is-overflow {
+  overflow-x: hidden;
 }

@@ -1,6 +1,6 @@
 function SliderItem({ slide }) {
     return (
-        <div className="h-screen flex items-center -mt-[70px] text-white">
+        <div className="flex items-center -mt-[70px] text-white">
             <div className="w-2/3">
                 {
                     slide['Video URL'].length > 0 && <video autoPlay muted loop playsInline
