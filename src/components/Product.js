@@ -49,7 +49,7 @@ function Product({ product }) {
 
     useEffect(() => {
         setImg(product.subproducts[activeProductIndex]['image URL'])
-    }, [])
+    }, [activeProductIndex])
 
     return (
         <div className="h-screen relative">
@@ -61,8 +61,8 @@ function Product({ product }) {
                     <ProductSvitcher subProducts={product.subproducts} setActiveProductIndex={setActiveProductIndex} />
                 </motion.div>
                 {
-                    img && <motion.div key={"img"} variants={rightFadeIn} initial="initial" animate={control} ref={ref} >
-                        <ProductImage image={img} />
+                    img && <motion.div key={product.subproducts[activeProductIndex]['image URL']} variants={rightFadeIn} initial="initial" animate="animate" >
+                        <ProductImage image={product.subproducts[activeProductIndex]['image URL']} />
                     </motion.div>
                 }
             </div>

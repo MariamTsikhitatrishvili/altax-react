@@ -1,16 +1,9 @@
-import { useEffect, useState } from "react"
-
-
 function ProductImage({image}) {
-    const [imageSrc, setImageSrc] = useState(image)
 
-    useEffect(() => {
-        setImageSrc(image)
-    }, [image])
     
   return (
-    imageSrc !== undefined && <div className="flex items-center justify-center md:w-full w-1/2 mx-auto">
-     <img src={imageSrc} alt="product-image" />
+    image !== undefined && <div className="flex items-centerjustify-center md:w-unset w-1/2 mx-auto">
+     <img src={image} alt="product-image"/>
     </div>
   )
 }

@@ -75,3 +75,13 @@ code {
 .fp-is-overflow {
   overflow-x: hidden;
 }
+
+.animate-fade {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
