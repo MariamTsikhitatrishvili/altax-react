@@ -49,10 +49,10 @@ function Product({ product }) {
 
     return (
         <div className="h-screen relative">
-            <img src={product["bg_image URL"]} className="absolute w-full h-full top-0 left-0 " alt={product.title} />
+            <img src={product["bg_image URL"]} className="absolute w-full h-full top-0 left-0 object-cover" alt={product.title} />
             <div className="absolute w-full h-full top-0 left-0 gradient"></div>
-            <div className="flex absolute w-full h-full top-0 left-0 justify-between items-center">
-                <motion.div key={"desc"} variants={leftFadeIn} initial="initial" animate={control} ref={ref} className="flex flex-col max-w-[60%]">
+            <div className="flex flex-col md:flex-row absolute w-full h-full top-0 left-0 justify-between items-center ">
+                <motion.div key={"desc"} variants={leftFadeIn} initial="initial" animate={control} ref={ref} className="flex flex-col md:max-w-[60%] w-full">
                     <ProductInfo flag={product['flag_image URL']} title={product.title} longDesc={product.long_desc} shortDesc={product.short_desc} />
                     <ProductSvitcher subProducts={product.subproducts} setActiveProductIndex={setActiveProductIndex} />
                 </motion.div>

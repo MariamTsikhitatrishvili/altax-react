@@ -5,7 +5,7 @@ function ProductSvitcher({ subProducts, setActiveProductIndex }) {
     const [activeProduct, setActiveProduct] = useState(0)
     console.log(subProducts[0])
     return (
-        <div className="m-8">
+        <div className="md:m-8 m-3">
             <div className="z-200 flex">
                 {
                     subProducts.map((item, ind) =>
