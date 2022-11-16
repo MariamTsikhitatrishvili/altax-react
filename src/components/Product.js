@@ -34,6 +34,7 @@ const leftFadeIn = {
 function Product({ product }) {
     const [activeProductIndex, setActiveProductIndex] = useState(0)
     const control = useAnimation()
+    const [img, setImg] = useState()
     const [ref, inView] = useInView()
 
     useEffect(() => {
@@ -46,6 +47,9 @@ function Product({ product }) {
         }
     }, [control, inView]);
 
+    useEffect(() => {
+        setImg(product.subproducts[activeProductIndex]['image URL'])
+    }, [])
 
     return (
         <div className="h-screen relative">
@@ -56,9 +60,11 @@ function Product({ product }) {
                     <ProductInfo flag={product['flag_image URL']} title={product.title} longDesc={product.long_desc} shortDesc={product.short_desc} />
                     <ProductSvitcher subProducts={product.subproducts} setActiveProductIndex={setActiveProductIndex} />
                 </motion.div>
-                <motion.div key={"img"} variants={rightFadeIn} initial="initial" animate={control} ref={ref} >
-                    <ProductImage image={product.subproducts[activeProductIndex]['image URL']} />
-                </motion.div>
+                {
+                    img && <motion.div key={"img"} variants={rightFadeIn} initial="initial" animate={control} ref={ref} >
+                        <ProductImage image={img} />
+                    </motion.div>
+                }
             </div>
         </div>
     )
