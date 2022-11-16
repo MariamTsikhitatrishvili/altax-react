@@ -62,7 +62,7 @@ function App() {
           </ReactFullpage.Wrapper>
         );
       }}
-    /> :
+    /> :  !pending &&
       <>
         <div className='flex flex-col gap-24 h-screen'>
           <div className='flex flex-col gap-24 h-screen'>
