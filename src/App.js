@@ -51,7 +51,7 @@ function App() {
             </div>
             {
               data.Products?.map((product, id) =>
-                <div className="section">
+                <div className="section" key={id}>
                   <Product key={id} product={product} />
                 </div>
               )
@@ -71,7 +71,7 @@ function App() {
           </div>
           {
             data.Products?.map((product, id) =>
-              <div className='h-screen'>
+              <div className='h-screen' key={id}>
                 <Product key={id} product={product} />
               </div>
             )

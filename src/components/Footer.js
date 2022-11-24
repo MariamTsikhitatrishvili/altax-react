@@ -24,8 +24,8 @@ function Footer({ partners }) {
                 </p>
                 <div className="flex flex-col md:flex-row gap-7">
                     {
-                        partners.map(partner =>
-                            <img src={partner['image URL']} className="w-44 hover:scale-125 duration-200" alt="partner" />
+                        partners.map((partner, ind) =>
+                            <img src={partner['image URL']} className="w-44 hover:scale-125 duration-200" alt="partner" key={ind}/>
                         )
                     }
                 </div>

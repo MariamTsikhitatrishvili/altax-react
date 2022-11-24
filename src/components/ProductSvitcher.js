@@ -4,7 +4,7 @@ import ProductDesc from "./ProductDesc"
 function ProductSvitcher({ subProducts, setActiveProductIndex }) {
     const [activeProduct, setActiveProduct] = useState(0)
     return (
-        <div className="md:m-8 m-3">
+        subProducts && <div className="md:m-8 m-3">
             <div className="z-200 flex">
                 {
                     subProducts.map((item, ind) =>
