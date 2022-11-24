@@ -34,13 +34,13 @@ function Product({ product }) {
   <div className="h-screen relative">
             <img src={product["bg_image URL"]} className="absolute w-full h-full top-0 left-0 object-cover" alt={product.title} />
             <div className="absolute w-full h-full top-0 left-0 gradient"></div>
-            <div className="grid grid-cols-1 md:grid-cols-2 absolute w-full h-full top-0 left-0 justify-between items-center ">
-                <div className="flex flex-col  w-full">
+            <div className="grid grid-cols-1 md:grid-cols-5 absolute w-full h-full top-0 left-0 justify-between items-center ">
+                <div className="md:col-span-3 flex flex-col  w-full">
                     <ProductInfo flag={product['flag_image URL']} title={product.title} longDesc={product.long_desc} shortDesc={product.short_desc} />
                     <ProductSvitcher subProducts={product?.subproducts} setActiveProductIndex={setActiveProductIndex} />
                 </div>
                 {
-                    img && product.subproducts.length > 0 && <motion.div key={product.subproducts[activeProductIndex]['image URL']} variants={rightFadeIn} initial="initial" animate="animate" >
+                    img && product.subproducts.length > 0 && <motion.div key={product.subproducts[activeProductIndex]['image URL']} className="md:col-span-2" variants={rightFadeIn} initial="initial" animate="animate" >
                         <ProductImage image={product.subproducts[activeProductIndex]['image URL']} />
                     </motion.div>
                 }
