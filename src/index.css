@@ -22,7 +22,9 @@
   src: url("../public/fonts/MarkGEOCAPS-Light.otf")
 }
 
-
+.high_caps {
+  font-variant-caps: all-small-caps;
+}
 
 body {
   margin: 0;

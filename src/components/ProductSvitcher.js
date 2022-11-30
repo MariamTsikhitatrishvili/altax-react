@@ -9,13 +9,13 @@ function ProductSvitcher({ subProducts, setActiveProductIndex }) {
                 {
                     subProducts.map((item, ind) =>
                         <div
-                            className={`cursor-pointer hover:opacity-70 duration-200 text-white p-4 text-xl`} key={ind}
+                            className={`cursor-pointer hover:opacity-70 duration-200 text-white p-4 text-xl w-[190px] bg-opacity-80 text-center`} key={ind}
                             onClick={() => {
                                 setActiveProduct(ind)
                                 setActiveProductIndex(ind)
                             }}
                             style={{
-                                'backgroundColor':`${item['bg_image URL']}`
+                                'backgroundColor':`${item['bg_image URL']}B3`
                             }}
                             >
                             {item.title}

@@ -31,7 +31,7 @@ function Product({ product }) {
     }, [activeProductIndex])
 
     return (
-  <div className="h-screen relative">
+  <div className="lg:h-screen h-[180vh] relative">
             <img src={product["bg_image URL"]} className="absolute w-full h-full top-0 left-0 object-cover" alt={product.title} />
             <div className="absolute w-full h-full top-0 left-0 gradient"></div>
             <div className="grid grid-cols-1 md:grid-cols-5 absolute w-full h-full top-0 left-0 justify-between items-center ">

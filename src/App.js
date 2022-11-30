@@ -64,14 +64,14 @@ function App() {
       }}
     /> :  !pending &&
       <>
-        <div className='flex flex-col gap-24 h-screen'>
+        <div className='flex flex-col'>
           <div className='flex flex-col gap-24 h-screen'>
             <Nav />
             <HeaderSlider slides={data.Slider} />
           </div>
           {
             data.Products?.map((product, id) =>
-              <div className='h-screen' key={id}>
+              <div key={id}>
                 <Product key={id} product={product} />
               </div>
             )
