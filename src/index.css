@@ -83,6 +83,17 @@ code {
   animation-duration: 4s;
 }
 
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  height: 25px !important;
+  border-radius: 0% !important;
+  background: white !important;
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span  {
+  background-color: #e3000f !important;
+}
+
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
