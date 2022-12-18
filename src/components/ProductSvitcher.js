@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import ProductDesc from "./ProductDesc"
 
-function ProductSvitcher({ subProducts, setActiveProductIndex }) {
+function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price }) {
     const [activeProduct, setActiveProduct] = useState(0)
     const [hovered, setHovered] = useState(false)
     const [hoverStyle, setHoverStyle] = useState({ backgroundColor: 'red' })
@@ -17,7 +17,7 @@ function ProductSvitcher({ subProducts, setActiveProductIndex }) {
                 {
                     subProducts.map((item, ind) =>
                         <div
-                            className={`cursor-pointer bg-white duration-200 text-black high-caps border-r border-b border-slate-500 p-2 hover:bg-[${item['bg_image URL']}] text-xl w-[190px] text-center`} key={ind}
+                            className={`cursor-pointer bg-white duration-200 text-black high-caps border-r border-b border-slate-300 p-2 hover:bg-[${item['bg_image URL']}] text-sm w-[130px] text-center`} key={ind}
                             onClick={() => {
                                 setActiveProduct(ind)
                                 setActiveProductIndex(ind)
@@ -35,7 +35,7 @@ function ProductSvitcher({ subProducts, setActiveProductIndex }) {
                     )
                 }
             </div>
-            <ProductDesc product={subProducts[activeProduct]} />
+            <ProductDesc price={price} salePrice={salePrice} product={subProducts[activeProduct]} />
         </div>
 
     )

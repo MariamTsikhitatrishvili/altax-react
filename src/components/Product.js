@@ -36,8 +36,8 @@ function Product({ product }) {
             <div className="absolute w-full h-full top-0 left-0 gradient"></div>
             <div className="grid grid-cols-1 md:grid-cols-5 absolute w-full h-full top-0 left-0 justify-between items-center ">
                 <div className="md:col-span-3 flex flex-col justify-between w-full self-start">
-                    <ProductInfo flag={product['flag_image URL']} title={product.title} longDesc={product.long_desc} shortDesc={product.short_desc} />
-                    <ProductSvitcher subProducts={product?.subproducts} setActiveProductIndex={setActiveProductIndex} />
+                    <ProductInfo title={product.title} longDesc={product.long_desc} shortDesc={product.short_desc} />
+                    <ProductSvitcher subProducts={product?.subproducts} salePrice={product['flag_image URL']} price={product['image URL']} setActiveProductIndex={setActiveProductIndex} />
                 </div>
                 {
                     img && product.subproducts.length > 0 && <motion.div key={product.subproducts[activeProductIndex]['image URL']} className="md:col-span-2" variants={rightFadeIn} initial="initial" animate="animate" >
