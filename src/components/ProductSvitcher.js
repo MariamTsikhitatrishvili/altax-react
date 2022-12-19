@@ -4,12 +4,11 @@ import ProductDesc from "./ProductDesc"
 function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price }) {
     const [activeProduct, setActiveProduct] = useState(0)
     const [hovered, setHovered] = useState(false)
-    const [hoverStyle, setHoverStyle] = useState({ backgroundColor: 'red' })
     const [hoverInd, setHoverInd] = useState(null)
     // let style = ''
-    useEffect(() => {
-        hovered ? setHoverStyle({ backgroundColor: 'white' }) : setHoverStyle({ backgroundColor: 'black' })
-    }, [hovered])
+    // useEffect(() => {
+    //     hovered ? setHoverStyle({ backgroundColor: 'white' }) : setHoverStyle({ backgroundColor: 'black' })
+    // }, [hovered])
 
     return (
         subProducts && <div className="md:m-4 m-3">
@@ -21,14 +20,15 @@ function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price 
                             onClick={() => {
                                 setActiveProduct(ind)
                                 setActiveProductIndex(ind)
+                            }}
+                            onMouseEnter={() =>{
+                                setHovered(true)
                                 setHoverInd(ind)
                             }}
-                            onMouseEnter={() => setHovered(true)}
                             onMouseLeave={() => setHovered(false)}
-                        // style={{
-                        //     'backgroundColor':`${item['bg_image URL']}B3`
-                        // }}
-                            // style={ind === activeProduct ? { hoverStyle } : { backgroundColor: 'white' }}
+                            style={{
+                                backgroundColor: hovered && ind === hoverInd || ind === activeProduct ? `${item['bg_image URL']}` : 'white'
+                            }}
                         >
                             {item.title}
                         </div>
