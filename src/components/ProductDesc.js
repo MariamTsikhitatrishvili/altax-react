@@ -12,7 +12,7 @@ function ProductDesc({ product, price, salePrice }) {
       }}
     >
       <div className="flex justify-between items-center px-4">
-        <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="w-3/5 mb-2 rounded-b-xl" alt="cart" />
+        <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="w-4/6 mb-2 rounded-b-xl" alt="cart" />
 
         <div className="flex flex-col items-end gap-2">
           {salePrice && <div className="bg-red-700 text-white px-3 py-1">Sale</div>}
