@@ -45,7 +45,7 @@ function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price 
                 {
                     subProducts.map((item, ind) =>
                         <SwiperSlide
-                            className={`cursor-pointer bg-white duration-200 text-black high-caps border-r border-b  p-2 text-sm w-[130px] text-center`} key={ind}
+                            className={`cursor-pointer bg-white duration-200 text-black high-caps border border-slate-300 p-2 text-sm w-[130px] text-center`} key={ind}
                             onClick={() => {
                                 setActiveProduct(ind)
                                 setActiveProductIndex(ind)
@@ -57,7 +57,7 @@ function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price 
                             onMouseLeave={() => setHovered(false)}
                             style={{
                                 backgroundColor: hovered && ind === hoverInd || ind === activeProduct ? `${item['bg_image URL']}B3` : 'white',
-                                borderColor: hovered && ind === hoverInd || ind === activeProduct ? `${item['bg_image URL']}B3` : 'gray',
+                                // borderColor: hovered && ind === hoverInd || ind === activeProduct ? `${item['bg_image URL']}B3` : 'gray',
                             }}
                         >
                             {item.title}

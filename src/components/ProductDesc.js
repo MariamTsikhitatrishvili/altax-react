@@ -4,15 +4,15 @@ function ProductDesc({ product, price, salePrice }) {
 
   return (
     product && <div
-      className={`text-black text-sm bg-white rounded-b-xl mt-4 w-full overflow-y-auto`}
+      className={`text-black text-sm bg-white rounded-b-xl mt-4 w-full overflow-y-auto flex flex-col justify-between min-h-[420px]`}
       style={{
         "&:hover": {
           background: `${product['bg_image URL']}`
         },
       }}
     >
-      <div className="flex justify-between items-center">
-        <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="w-3/5 mx-auto mb-2 rounded-b-xl" alt="cart" />
+      <div className="flex justify-between items-center px-4">
+        <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="w-3/5 mb-2 rounded-b-xl" alt="cart" />
 
         <div className="flex flex-col items-end gap-2">
           {salePrice && <div className="bg-red-700 text-white px-3 py-1">Sale</div>}
