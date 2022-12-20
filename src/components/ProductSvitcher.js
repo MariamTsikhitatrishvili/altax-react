@@ -57,6 +57,7 @@ function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price 
                             onMouseLeave={() => setHovered(false)}
                             style={{
                                 backgroundColor: hovered && ind === hoverInd || ind === activeProduct ? `${item['bg_image URL']}` : 'white',
+                                color: hovered && ind === hoverInd || ind === activeProduct ? `white` : 'black',
                                 // borderColor: hovered && ind === hoverInd || ind === activeProduct ? `${item['bg_image URL']}B3` : 'gray',
                             }}
                         >
