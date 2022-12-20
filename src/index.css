@@ -98,3 +98,10 @@ code {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+
+/* swiper */
+
+.swiper-button-disabled {
+  opacity: 70% !important;
+  cursor: auto !important;
+}

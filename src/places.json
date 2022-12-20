@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Gorgia",
+        "population": "8,175,133",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+        "state": "New York",
+        "longitude": 44.751459,
+        "latitude": 41.727571
+    },
+    {
+        "city": "Extra",
+        "population": "8,175,133",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+        "state": "New York",
+        "longitude": 44.757035,
+        "latitude": 41.727925
+    }
+]

@@ -5,6 +5,7 @@ import HeaderSlider from './components/HeaderSlider';
 import Product from './components/Product';
 import Footer from './components/Footer';
 import ReactFullpage from '@fullpage/react-fullpage'; // will return static version on server and "live" version on client
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 function App() {
   const [data, setData] = useState({})
