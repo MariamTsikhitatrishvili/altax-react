@@ -1,18 +1,60 @@
 [
     {
-        "title": "Gorgia",
-        "population": "8,175,133",
+        "title": "ბრიკორამა",
         "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
-        "state": "New York",
-        "longitude": 44.751459,
-        "latitude": 41.727571
+        "hours": "9:30 - 20:30",
+        "days": "ორ.სამ.ოთხ.ხუთ.პარ.შაბ.კვ",
+        "phone": "(032)200-11-11",
+        "longitude": 44.770069,
+        "latitude": 41.749348
     },
     {
-        "city": "Extra",
-        "population": "8,175,133",
+        "title": "ნოვა",
         "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
-        "state": "New York",
-        "longitude": 44.757035,
-        "latitude": 41.727925
+        "hours": "10:00 - 20:00",
+        "days": "ორ.სამ.ოთხ.ხუთ.პარ.შაბ.კვ",
+        "phone": "(032)200-11-11",
+        "longitude": 44.77916730626871,
+        "latitude": 41.73590688573291
+    },
+    {
+        "title": "ეკოვუდი",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+        "hours": "9:30 - 20:30",
+        "days": "ორ.სამ.ოთხ.ხუთ.პარ.შაბ.კვ",
+        "phone": "(032)247-44-22",
+        "address": "წყალსადენის ქუჩა N21",
+        "longitude": 44.79327013625641,
+        "latitude": 41.78718189596733
+    },
+    {
+        "title": "ეკოვუდი ექსპრესი",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+        "hours": "10:00 - 18:00",
+        "days": "ორ.სამ.ოთხ.ხუთ.პარ.შაბ.კვ",
+        "phone": "(032)247-33-22",
+        "address": "წყალსადენის ქუჩა N21",
+        "longitude": 44.78334758998564,
+        "latitude": 41.729876742952186
+    },
+    {
+        "title": "OldBoy Barbershop",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+        "hours": "10:00 - 21:00",
+        "days": "ორ.სამ.ოთხ.ხუთ.პარ.შაბ.კვ",
+        "phone": "514 08 00 11",
+        "address": "ალ.ყაზბეგის გამზირი N11",
+        "longitude": 44.76482886929673,
+        "latitude": 41.7262231617808
+    },
+    {
+        "title": "გორგია",
+        "image": "http://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Above_Gotham.jpg/240px-Above_Gotham.jpg",
+        "hours": "10:00 - 21:00",
+        "days": "ორ.სამ.ოთხ.ხუთ.პარ.შაბ.კვ",
+        "phone": "(032)296-09-60 ",
+        "address": "წერეთლის გამზირი N140",
+        "longitude": 44.7763937780285,
+        "latitude": 41.74907630378153
     }
 ]

@@ -65,17 +65,32 @@ function Footer({ partners }) {
                             longitude={Number(popupInfo.longitude)}
                             latitude={Number(popupInfo.latitude)}
                             onClose={() => setPopupInfo(null)}
+
                         >
-                            <div>
-                                {popupInfo.city}, {popupInfo.state} |{' '}
-                                <a
-                                    target="_new"
-                                    href={`http://en.wikipedia.org/w/index.php?title=Special:Search&search=${popupInfo.city}, ${popupInfo.state}`}
-                                >
-                                    Wikipedia
-                                </a>
+                            <div className='p-2 bg-white w-fit'>
+                                <div className='text-lg font-markBold'>
+                                    {popupInfo.title}
+                                </div>
+                                {
+                                    popupInfo.address && <div className='flex items-center gap-2 whitespace-nowrap'>
+                                        <p className='font-markSemiBold'>მისამართი: </p>
+                                        {popupInfo.address}
+                                    </div>
+                                }
+                                <div className='flex items-center gap-2 whitespace-nowrap'>
+                                    <p className='font-markSemiBold'>სამუშაო საათები: </p>
+                                    {popupInfo.hours}
+                                </div>
+                                <div className='flex items-center gap-2 whitespace-nowrap'>
+                                    <p className='font-markSemiBold'>სამუშაო დღეები: </p>
+                                    {popupInfo.days}
+                                </div>
+                                <div className='flex items-center gap-2 whitespace-nowrap mb-2'>
+                                    <p className='font-markSemiBold'>საკონტაქტო ნომერი: </p>
+                                    {popupInfo.phone}
+                                </div>
+                                <img className='w-full' src={popupInfo.image} />
                             </div>
-                            <img width="100%" src={popupInfo.image} />
                         </Popup>
                     )}
                 </Map>

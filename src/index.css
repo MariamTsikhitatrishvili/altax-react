@@ -105,3 +105,13 @@ code {
   opacity: 70% !important;
   cursor: auto !important;
 }
+
+.mapboxgl-popup-content {
+  width: fit-content !important;
+}
+.mapboxgl-popup-close-button {
+  top: 8px !important;
+  right: 8px !important;
+  width: 16px !important;
+  height: 16px !important;
+}
