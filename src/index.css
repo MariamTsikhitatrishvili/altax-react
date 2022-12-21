@@ -108,6 +108,7 @@ code {
 
 .mapboxgl-popup-content {
   width: fit-content !important;
+  border-radius: 12px !important;
 }
 .mapboxgl-popup-close-button {
   top: 8px !important;
