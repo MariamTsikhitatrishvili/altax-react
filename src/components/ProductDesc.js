@@ -6,7 +6,7 @@ function ProductDesc({ product, price, salePrice }) {
     product && <div
       className={`text-black text-sm bg-white rounded-b-xl mt-4 w-full relative overflow-y-auto flex flex-col justify-between min-h-[430px]`}
     >
-        <img src={process.env.PUBLIC_URL + `/images/Ornament-min.png`} className="w-full h-[100%] absolute top-0 left-0 opacity-40 object-cover z-10" alt="bg" />
+        <img src={process.env.PUBLIC_URL + `/images/Ornament-min.png`} className="w-full h-[100%] absolute top-0 left-0 opacity-30 object-cover z-10" alt="bg" />
       <div className="flex flex-col  overflow-hidden" >
         <div className="flex justify-between items-center px-4">
           <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="w-4/6 mb-2 rounded-b-xl z-20" alt="cart" />
