@@ -7,7 +7,7 @@ function SliderItem({ slide }) {
                         src={slide['Video URL']} />
                 }
             </div>
-            <div className={`bg-${slide.background_color} md:w-1/3 w-full flex flex-col gap-5 p-7`}>
+            <div className={`bg-${slide.background_color} md:w-1/3 w-full flex flex-col gap-5 md:p-7 md:pt-0 pt-7`}>
                 <div className="text-4xl">
                     {slide.title}
                 </div>

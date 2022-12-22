@@ -45,10 +45,17 @@ code {
   display: flex !important;
   align-items: center;
   margin-left: 8px;
-  margin-top: 48px;
-  margin-bottom: 24px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  padding-bottom: 24px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .slick-dots {
+    justify-content: center;
+    margin: 0;
+  }
+}
 .slick-dots li {
   color: transparent;
   margin-right: 8px;
