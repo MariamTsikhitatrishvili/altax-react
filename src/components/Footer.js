@@ -1,7 +1,8 @@
 
 import * as React from 'react';
 import { useState, useMemo } from 'react';
-import { render } from 'react-dom';
+import disableScroll from 'disable-scroll';
+
 import Map, {
     Marker,
     Popup,
@@ -40,8 +41,8 @@ function Footer({ partners }) {
     );
 
     return (
-        <div className='grid grid-cols-4 content-center bg-slate-500 h-screen'>
-            <div className='col-span-3 pointer-events-auto'>
+        <div className='lg:grid lg:grid-cols-4 flex flex-col-reverse lg:content-center bg-slate-500 lg:h-screen'>
+            <div className='lg:col-span-3 pointer-events-auto lg:h-auto h-[500px] p-4'>
                 <Map
                     mapboxAccessToken='pk.eyJ1IjoibWFyaWFtdHMiLCJhIjoiY2xidnlhZ2V2MDNvZDNucnd6MWJwaG5zZCJ9.FvQuKl1gvqhitwftJiEGXg'
                     initialViewState={{
@@ -49,7 +50,7 @@ function Footer({ partners }) {
                         latitude: 41.727541,
                         zoom: 12
                     }}
-                    // style={{ width: '100%', height: '100%' }}
+                    style={{  height: '100%' }}
                     mapStyle="mapbox://styles/mapbox/light-v9"
                 >
                     <GeolocateControl position="top-left" />

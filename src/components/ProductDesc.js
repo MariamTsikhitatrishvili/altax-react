@@ -6,7 +6,7 @@ function ProductDesc({ product, price, salePrice }) {
     product && <div
       className={`text-black text-sm bg-white rounded-b-xl mt-4 w-full relative overflow-y-auto flex flex-col justify-between min-h-[430px]`}
     >
-        <img src={process.env.PUBLIC_URL + `/images/Ornament-min.png`} className="w-full h-[100%] absolute top-0 left-0 opacity-30 object-cover z-10" alt="bg" />
+      <img src={process.env.PUBLIC_URL + `/images/Ornament-min.png`} className="w-full h-[100%] absolute top-0 left-0 opacity-90 object-cover z-10" alt="bg" />
       <div className="flex flex-col  overflow-hidden" >
         <div className="flex justify-between items-center px-4">
           <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="w-4/6 mb-2 rounded-b-xl z-20" alt="cart" />
@@ -30,19 +30,25 @@ function ProductDesc({ product, price, salePrice }) {
           {desc[0].split("ზედა ნოტები")[0]}
         </div>
         <div className="mt-2 px-4 pb-2">
-          <div className="flex items-center gap-1">
-            <div className="w-1 h-1 rounded-full bg-black"></div>
-            <div className="whitespace-nowrap">ზედა ნოტები:</div>
+          <div className="flex gap-2 items-start">
+            <div className="flex items-center gap-1">
+              <div className="w-1 h-1 rounded-full bg-black"></div>
+              <div className="whitespace-nowrap font-bold">ზედა ნოტები:</div>
+            </div>
             <div>{desc[1]}</div>
           </div>
-          <div className="flex items-center gap-1">
-            <div className="w-1 h-1 rounded-full bg-black"></div>
-            <div className="whitespace-nowrap">შუა ნოტები:</div>
+          <div className="flex gap-2 items-start">
+            <div className="flex items-center gap-1">
+              <div className="w-1 h-1 rounded-full bg-black"></div>
+              <div className="whitespace-nowrap font-bold">შუა ნოტები:</div>
+            </div>
             <div>{desc[2]}</div>
           </div>
-          <div className="flex items-center gap-1">
-            <div className="w-1 h-1 rounded-full bg-black"></div>
-            <div className="whitespace-nowrap">ძირითადი ნოტები:</div>
+          <div className="flex gap-2 items-start">
+            <div className="flex items-center gap-1">
+              <div className="w-1 h-1 rounded-full bg-black"></div>
+              <div className="whitespace-nowrap font-bold">ძირითადი ნოტები:</div>
+            </div>
             <div>{desc[3]}</div>
           </div>
         </div>

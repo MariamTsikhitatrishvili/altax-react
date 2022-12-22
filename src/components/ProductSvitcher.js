@@ -41,6 +41,14 @@ function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price 
                 }}
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 4.5,
+                    },
+                    1024: {
+                        slidesPerView: 6.7,
+                    }
+                }}
             >
                 {
                     subProducts.map((item, ind) =>
