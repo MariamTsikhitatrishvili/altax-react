@@ -15,7 +15,7 @@ function ProductDesc({ product, price, salePrice }) {
             {salePrice && <div className="bg-red-700 text-white px-3 py-1">Sale</div>}
             <div className="flex gap-3 items-center font-markLight mr-5">
               {
-                salePrice && <div className="lg:text-3xl text-red-700 flex gap-3 items-center">
+                salePrice && <div className="lg:text-3xl text-lg text-red-700 flex gap-3 items-center">
                   {salePrice} ₾
                   <div className="h-7 w-[1px] bg-slate-500"> </div>
                 </div>
