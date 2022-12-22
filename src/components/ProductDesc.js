@@ -20,7 +20,7 @@ function ProductDesc({ product, price, salePrice }) {
                   <div className="h-7 w-[1px] bg-slate-500"> </div>
                 </div>
               }
-              <p className="text-3xl text-gray-600">
+              <p className="lg:text-3xl text-lg text-gray-600">
                 {price} ₾
               </p>
             </div>
