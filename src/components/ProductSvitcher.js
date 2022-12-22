@@ -43,6 +43,9 @@ function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price 
                 onSwiper={(swiper) => console.log(swiper)}
                 breakpoints={{
                     0: {
+                        slidesPerView: 3.5,
+                    },
+                    600: {
                         slidesPerView: 4.5,
                     },
                     1024: {
