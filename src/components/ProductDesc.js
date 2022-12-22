@@ -2,11 +2,11 @@ import { motion } from "framer-motion"
 
 const fadeIn = {
   initial: {
-    x: -50,
+    // x: -50,
     opacity: 0,
   },
   animate: {
-    x: 0,
+    // x: 0,
     opacity: 1,
     transition: {
       duration: 0.3
@@ -24,7 +24,7 @@ function ProductDesc({ product, price, salePrice }) {
     >
       <img src={process.env.PUBLIC_URL + `/images/Ornament-min.png`} className="w-full h-[100%] absolute top-0 left-0 opacity-90 object-cover z-10" alt="bg" />
       <div className="flex flex-col  overflow-hidden" >
-        <div className="flex justify-between items-center px-4">
+        <div className="flex justify-between items-center px-4 z-50">
           <motion.div key={product.title} variants={fadeIn} initial="initial" animate="animate">
             <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="w-4/6 mb-2 rounded-b-xl z-20" alt="cart" />
           </motion.div>

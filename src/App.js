@@ -58,7 +58,7 @@ function App() {
                 </div>
               )
             }
-            <div className="section">
+            <div className="section" id='aboutUs'>
               <Footer partners={data?.Partners} />
             </div>
           </ReactFullpage.Wrapper>
