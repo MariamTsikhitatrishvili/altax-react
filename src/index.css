@@ -26,7 +26,8 @@
   font-variant-caps: all-small-caps;
 }
 
-body, html {
+body,
+html {
   position: relative;
   margin: 0;
   font-family: markGeo-light;
@@ -37,6 +38,7 @@ body, html {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
 .slick-track {
   display: flex;
 }
@@ -56,6 +58,7 @@ code {
     margin: 0;
   }
 }
+
 .slick-dots li {
   color: transparent;
   margin-right: 8px;
@@ -92,20 +95,47 @@ code {
 }
 
 
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
   height: 25px !important;
   border-radius: 0% !important;
   background: white !important;
 }
 
-#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span  {
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
   background-color: #e3000f !important;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  margin: 11px !important;
 }
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+  margin: -2px 0 0 -5px !important;
+}
+
+#fp-nav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  margin: -3px 0 0 -6px !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 /* swiper */
 
@@ -118,6 +148,7 @@ code {
   width: fit-content !important;
   border-radius: 12px !important;
 }
+
 .mapboxgl-popup-close-button {
   top: 8px !important;
   right: 8px !important;

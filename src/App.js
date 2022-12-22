@@ -46,7 +46,7 @@ function App() {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <div className='flex flex-col gap-24 lg:max-h-screen overflow-hidden'>
+              <div className='flex flex-col gap-20 lg:max-h-screen overflow-hidden'>
                 <Nav />
                 <HeaderSlider slides={data.Slider} />
               </div>
@@ -67,7 +67,7 @@ function App() {
     /> :  !pending &&
       <>
         <div className='flex flex-col'>
-          <div className='flex flex-col gap-24'>
+          <div className='flex flex-col gap-12'>
             <Nav />
             <HeaderSlider slides={data.Slider} />
           </div>

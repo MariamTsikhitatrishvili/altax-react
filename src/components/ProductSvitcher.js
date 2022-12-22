@@ -22,10 +22,10 @@ function ProductSvitcher({ subProducts, setActiveProductIndex, salePrice, price 
     return (
         subProducts && <div className="md:mx-4 my-2 m-3 ">
             <div className="flex justify-end w-full gap-3 mb-4">
-                <div ref={prevRef} className=" cursor-pointer hover:opacity-70 rounded-full border-2 duration-200 border-white shadow-sm w-8 h-8 flex items-center justify-center">
+                <div ref={prevRef} className=" cursor-pointer hover:border-[#e3000f] rounded-full border-2 duration-200 border-white shadow-sm w-8 h-8 flex items-center justify-center">
                     <img src={process.env.PUBLIC_URL + `/images/arrow.svg`} className="rotate-180 w-3" alt="arrow" />
                 </div>
-                <div ref={nextRef} className="cursor-pointer hover:opacity-70 rounded-full border-2 duration-200 border-white shadow-sm w-8 h-8 flex items-center justify-center">
+                <div ref={nextRef} className="cursor-pointer hover:border-[#e3000f] rounded-full border-2 duration-200 border-white shadow-sm w-8 h-8 flex items-center justify-center">
                     <img src={process.env.PUBLIC_URL + `/images/arrow.svg`} className="w-3" alt="arrow" />
                 </div>
             </div>
