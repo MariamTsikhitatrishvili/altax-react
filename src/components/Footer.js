@@ -42,7 +42,7 @@ function Footer({ partners }) {
 
     return (
         <div className='lg:grid lg:grid-cols-4 flex flex-col-reverse lg:content-center bg-slate-500 lg:h-screen'>
-            <div className='lg:col-span-3 pointer-events-auto lg:h-auto h-[500px] p-4'>
+            <div className='lg:col-span-3 pointer-events-auto lg:h-auto h-[500px] p-4' id="footer">
                 <Map
                     mapboxAccessToken='pk.eyJ1IjoibWFyaWFtdHMiLCJhIjoiY2xidnlhZ2V2MDNvZDNucnd6MWJwaG5zZCJ9.FvQuKl1gvqhitwftJiEGXg'
                     initialViewState={{
@@ -52,6 +52,7 @@ function Footer({ partners }) {
                     }}
                     style={{  height: '100%' }}
                     mapStyle="mapbox://styles/mapbox/light-v9"
+                    autoScrolling={false}
                 >
                     <GeolocateControl position="top-left" />
                     <FullscreenControl position="top-left" />

@@ -38,6 +38,7 @@ function App() {
   return (
     !pending && !isMobile ? <ReactFullpage
       //fullpage options
+      normalScrollElements='#footer'
       licenseKey={'YOUR_KEY_HERE'}
       scrollingSpeed={1000} /* Options here */
       navigation={true}
