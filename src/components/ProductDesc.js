@@ -25,24 +25,40 @@ function ProductDesc({ product, price, salePrice }) {
       <img src={process.env.PUBLIC_URL + `/images/Ornament-min.png`} className="w-full h-[100%] absolute top-0 left-0 opacity-90 object-cover z-10" alt="bg" />
       <div className="flex flex-col  overflow-hidden" >
         <div className="flex justify-between items-center px-4 z-50">
-          <motion.div key={product.title} variants={fadeIn} initial="initial" animate="animate">
-            <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="w-4/6 mb-2 rounded-b-xl z-20" alt="cart" />
-          </motion.div>
+          <div className="w-3/4 flex gap-5">
+            <motion.div key={product.title} variants={fadeIn} initial="initial" animate="animate">
+              <img src={process.env.PUBLIC_URL + `/images/${product.title.toLowerCase()}.jpg`} className="mb-2 rounded-b-xl z-20" alt="cart" />
+            </motion.div>
+
+            <div className="mt-5 flex flex-col gap-1 text-xs whitespace-nowrap">
+              <div>
+                მოდელი:{salePrice?.split(" ")[0]}
+              </div>
+              <div>
+                შტრიხკოდი: {salePrice?.split(" ")[1]}
+              </div>
+              <div className="flex items-center gap-2">
+                SAFETY DOC:
+                <img src={process.env.PUBLIC_URL + `/images/pdf-icon.png`} className="w-6" alt="cart" />
+              </div>
+            </div>
+          </div>
 
           <div className="flex flex-col items-end gap-2">
-            {salePrice && <div className="bg-red-700 text-white px-3 py-1">Sale</div>}
+            {/* {salePrice && <div className="bg-red-700 text-white px-3 py-1">Sale</div>} */}
             <div className="flex gap-3 items-center font-markLight mr-5">
-              {
+              {/* {
                 salePrice && <div className="lg:text-3xl text-lg text-red-700 flex gap-3 items-center">
                   {salePrice} ₾
                   <div className="h-7 w-[1px] bg-slate-500"> </div>
                 </div>
-              }
+              } */}
               <p className="lg:text-3xl whitespace-nowrap text-lg text-gray-600">
                 {price} ₾
               </p>
             </div>
           </div>
+
         </div>
         <div className="px-4 mt-4">
           {desc[0].split("ზედა ნოტები")[0]}
