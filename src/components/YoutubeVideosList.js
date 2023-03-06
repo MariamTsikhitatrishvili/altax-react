@@ -20,12 +20,12 @@ function YoutubeVideosList() {
       });
   }, [channelId]);
   return (
-    <div className="flex gap-6 mt-3">
+    <div className="flex gap-6">
       {videos.map((video) => (
         <div key={video.id.videoId}>
           <iframe
-            width="325"
-            height="200"
+            width="270"
+            height="170"
             src={`https://www.youtube.com/embed/${video.id.videoId}`}
             frameBorder="0"
             allowFullScreen

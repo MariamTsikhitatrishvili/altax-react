@@ -46,9 +46,11 @@ function App() {
         return (
           <ReactFullpage.Wrapper>
             <div className="section">
-              <div className="flex flex-col gap-20 lg:max-h-screen overflow-hidden">
-                <Nav />
-                <div>
+              <div className="flex flex-col gap-20 lg:h-screen overflow-hidden relative">
+                <div className="absolute left-0 top-0 w-full z-50">
+                  <Nav />
+                </div>
+                <div className="flex flex-col justify-between h-screen pb-4">
                   <HeaderSlider slides={data.Slider} />
                   <YoutubeVideosList />
                 </div>
