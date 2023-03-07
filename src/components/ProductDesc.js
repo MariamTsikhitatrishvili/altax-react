@@ -42,7 +42,7 @@ function ProductDesc({ product, price, salePrice }) {
                     process.env.PUBLIC_URL +
                     `/images/${product.title.toLowerCase()}.jpg`
                   }
-                  className="mb-2 rounded-b-xl z-20"
+                  className="mb-2 rounded-xl z-20"
                   alt="cart"
                 />
               </motion.div>

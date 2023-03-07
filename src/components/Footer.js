@@ -1,6 +1,6 @@
-import { useState, useMemo, useRef, useEffect } from "react";
+import { useState, useMemo, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,26 +18,10 @@ import Pin from "./Pin";
 
 import PLACES from "../places.json";
 function Footer({ partners }) {
-  const [activeIndex, setActiveIndex] = useState(0);
   const [popupInfo, setPopupInfo] = useState(null);
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.activeIndex);
-  };
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prevIndex) =>
-        prevIndex < partners.length - 1 ? prevIndex + 1 : 0
-      );
-    }, 2500);
-
-    return () => clearInterval(timer);
-  }, []);
-
   const pins = useMemo(
     () =>
       PLACES.map((place, index) => (
@@ -173,16 +157,21 @@ function Footer({ partners }) {
           </div>
         </div>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={0}
           slidesPerView={6.7}
+          loop
           onInit={(swiper) => {
             swiper.params.navigation.prevEl = prevRef.current;
             swiper.params.navigation.nextEl = nextRef.current;
             swiper.navigation.init();
             swiper.navigation.update();
           }}
-          onSlideChange={handleSlideChange}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
             0: {
@@ -205,9 +194,7 @@ function Footer({ partners }) {
             >
               <img
                 src={partner["image URL"]}
-                className={`item ${
-                  activeIndex === ind ? "active bg-contain" : ""
-                }`}
+                className="hover:scale-110 duration-200 scale-75 bg-contain"
                 alt="partner"
                 key={ind}
               />
