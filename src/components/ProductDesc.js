@@ -21,7 +21,7 @@ function ProductDesc({ product, price, salePrice }) {
   return (
     product && (
       <div
-        className={`text-black text-sm bg-white rounded-b-xl mt-4 w-full relative overflow-y-auto flex flex-col justify-between min-h-[450px]`}
+        className={`text-black text-sm bg-white rounded-xl mt-4 w-full relative overflow-y-auto flex flex-col justify-between min-h-[450px]`}
       >
         <img
           src={process.env.PUBLIC_URL + `/images/Ornament-min.png`}
