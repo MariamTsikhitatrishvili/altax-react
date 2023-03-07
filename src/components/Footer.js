@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 // Import Swiper styles
@@ -18,10 +18,26 @@ import Pin from "./Pin";
 
 import PLACES from "../places.json";
 function Footer({ partners }) {
+  const [activeIndex, setActiveIndex] = useState(0);
   const [popupInfo, setPopupInfo] = useState(null);
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prevIndex) =>
+        prevIndex < partners.length - 1 ? prevIndex + 1 : 0
+      );
+    }, 2500);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const pins = useMemo(
     () =>
       PLACES.map((place, index) => (
@@ -166,7 +182,7 @@ function Footer({ partners }) {
             swiper.navigation.init();
             swiper.navigation.update();
           }}
-          onSlideChange={() => console.log("slide change")}
+          onSlideChange={handleSlideChange}
           onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
             0: {
@@ -189,7 +205,9 @@ function Footer({ partners }) {
             >
               <img
                 src={partner["image URL"]}
-                className="hover:scale-110 duration-200 bg-contain"
+                className={`item ${
+                  activeIndex === ind ? "active bg-contain" : ""
+                }`}
                 alt="partner"
                 key={ind}
               />

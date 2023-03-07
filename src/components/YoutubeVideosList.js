@@ -21,8 +21,8 @@ function YoutubeVideosList() {
   }, [channelId]);
   return (
     <div className="flex gap-6 my-auto">
-      {videos.map((video) => (
-        <div key={video.id.videoId}>
+      {videos.map((video, ind) => (
+        <div key={ind}>
           <iframe
             width="270"
             height="170"
