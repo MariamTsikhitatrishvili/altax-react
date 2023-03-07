@@ -4,22 +4,22 @@
 
 @font-face {
   font-family: "markGeo-light";
-  src: url("../public/fonts/MarkGEO-Light.otf")
+  src: url("../public/fonts/MarkGEO-Light.otf");
 }
 
 @font-face {
   font-family: "markGeo-SemiBold";
-  src: url("../public/fonts/MarkGEO-SemiBold.otf")
+  src: url("../public/fonts/MarkGEO-SemiBold.otf");
 }
 
 @font-face {
   font-family: "markGeo-CapsBold";
-  src: url("../public/fonts/MarkGEOCAPS-Bold.otf")
+  src: url("../public/fonts/MarkGEOCAPS-Bold.otf");
 }
 
 @font-face {
   font-family: "markGeo-CapsLight";
-  src: url("../public/fonts/MarkGEOCAPS-Light.otf")
+  src: url("../public/fonts/MarkGEOCAPS-Light.otf");
 }
 
 .high_caps {
@@ -36,7 +36,8 @@ html {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .slick-track {
@@ -47,7 +48,8 @@ code {
   display: flex !important;
   align-items: center;
   margin-left: 8px;
-  margin-top: 24px;
+  margin-top: -24px;
+  position: fixed;
   /* margin-bottom: 48px; */
   /* padding-bottom: 24px; */
 }
@@ -78,7 +80,11 @@ code {
 
 .gradient {
   background: rgb(0, 0, 0);
-  background: linear-gradient(360deg, rgba(0, 0, 0, 0.8438725832129726) 0%, rgba(0, 0, 0, 0.36207986612613796) 100%);
+  background: linear-gradient(
+    360deg,
+    rgba(0, 0, 0, 0.8438725832129726) 0%,
+    rgba(0, 0, 0, 0.36207986612613796) 100%
+  );
 }
 
 .fp-overflow {
@@ -93,7 +99,6 @@ code {
   animation-name: fadeIn;
   animation-duration: 4s;
 }
-
 
 #fp-nav ul li a span,
 .fp-slidesNav ul li a span {
@@ -135,7 +140,6 @@ code {
     opacity: 1;
   }
 }
-
 
 /* swiper */
 

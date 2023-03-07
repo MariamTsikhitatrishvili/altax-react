@@ -50,7 +50,7 @@ function App() {
                 <div className="absolute left-0 top-0 w-full z-50">
                   <Nav />
                 </div>
-                <div className="flex flex-col justify-between h-screen pb-4">
+                <div className="flex flex-col justify-between h-screen">
                   <HeaderSlider slides={data.Slider} />
                   <YoutubeVideosList />
                 </div>

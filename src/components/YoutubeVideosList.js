@@ -20,7 +20,7 @@ function YoutubeVideosList() {
       });
   }, [channelId]);
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 my-auto">
       {videos.map((video) => (
         <div key={video.id.videoId}>
           <iframe
